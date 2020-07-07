@@ -758,8 +758,6 @@ void set_default_head_values(ds_db_head_t *head)
 		str *p_val = partition_params[i].getter_func(head);
 		if (p_val->s == NULL)
 			*p_val = partition_params[i].default_value;
-		else
-			p_val->len = strlen(p_val -> s);
 	}
 }
 
